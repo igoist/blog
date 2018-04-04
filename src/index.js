@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './WebMap/App';
 import { AppContainer } from 'react-hot-loader';
 
 

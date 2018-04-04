@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from './Img';
-import '../public/css/index.css';
+import '../../public/css/WebMap/index.css';
 
 class App extends React.Component {
   constructor(props) {
