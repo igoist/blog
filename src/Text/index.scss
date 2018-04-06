@@ -1,11 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.hidden {
+  display: none;
 }
 
 .text-wrap {
+  display: block;
   position: absolute;
   border: 1px dashed #333;
   padding: 8px 12px;
+}
+
+.input-part {
+  input {
+    border: 1px solid #fff;
+    border-color: #f1f1f1;
+    border-radius: 2px;
+    padding: 7px 16px;
+    // width: inherit;
+    height: 34px;
+    line-height: 1;
+    background-color: #f1f1f1;
+    color: #252525;
+    font-size: 14px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,background-color ease-in-out .15s;
+  }
 }

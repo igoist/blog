@@ -1,5 +1,5 @@
 import React from 'react';
-{/* import '../../public/css/WebMap/index.css'; */}
+import '../../public/css/style.css';
 import Text from './Text';
 
 class App extends React.Component {
