@@ -3,20 +3,40 @@ import React from 'react';
 class Popover extends React.Component {
   constructor(props) {
     super(props);
+    // this.state = {
+    //   hidden: this.props.hidden
+    // };
+
+    this.handle = this.handle.bind(this);
+  }
+
+  handle(hidden) {
+    if (hidden < 3) {
+      let wrap = this.wrap;
+      if (hidden === 0) {
+        wrap.className = 'popover popover-placement-right zoom-big-leave zoom-big-leave-active';
+        setTimeout(() => {
+          wrap.className = 'popover popover-placement-right popover-hidden';
+        }, 150);
+      } else if (hidden === 1) {
+        wrap.className = 'popover popover-placement-right zoom-big-enter zoom-big-enter-active';
+      } else {
+        wrap.className = 'popover popover-placement-right popover-hidden';
+      }
+    }
   }
 
   componentDidMount() {
-    let wrap = this.wrap;
-    wrap.className = 'popover popover-placement-right zoom-big-enter zoom-big-enter-active';
-  }
-
-  componentWillUnmount() {
-    let wrap = this.wrap;
-    // how to ...
-    wrap.className = 'popover popover-placement-right zoom-big-leave zoom-big-leave-active';
+    // let wrap = this.wrap;
+    // wrap.className = 'popover popover-placement-right zoom-big-enter zoom-big-enter-active';
+    // const { hidden } = this.props;
+    // this.handle(hidden);
+    // console.log('create popover');
   }
 
   render() {
+    const { hidden } = this.props;
+    this.handle(hidden);
     return (
       <div style={{ position: 'absolute', top: '0px', left: '0px', width: '100%' }}>
         <div>
@@ -26,7 +46,7 @@ class Popover extends React.Component {
               <div className='popover-inner'>
                 <div>
                   <div className='popover-title'>
-                    <span>Title</span>
+                    <span>Title{ hidden }</span>
                   </div>
                   <div className='popover-inner-content'>
                     <div>
