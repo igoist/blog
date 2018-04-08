@@ -141,7 +141,7 @@ class Text extends React.Component {
             <input type='text' name='no' placeholder='text' defaultValue={ text } ref={ input => { this.input = input; }} />
           </div>
         </div>
-        <Popover hidden={ ifPopover } />
+        <Popover hidden={ ifPopover } placement={ 'leftBottom' } />
       </div>
     );
   }
