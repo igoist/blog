@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: menlo;
+}
+
+$bgColor: #333;
+
+body {
+  margin: 0px 20px;
+  background: $bgColor;
+}
+
+$c1Color: #66afe9;
+$n: 6;
+$minRowHeight: (800px - 2 * 20px) / 6;
+
+#neon-box {
+  margin-top: 20px;
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat($n, 1fr);
+    grid-auto-rows: minmax($minRowHeight, auto);
+    grid-gap: 5px;
+    .row {
+      display: grid;
+      grid-column: 1 / 7;
+      grid-gap: 5px;
+      grid-template-columns: repeat($n, 1fr);
+      .item {
+        padding: 12px 20px;
+        background: $bgColor;
+        border: 1px solid $c1Color;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+      }
+    }
+  }
+}
+
+$red: #f05050;
+$orange: #ffa500;
+$yellow: #ffd52e;
+$green: #49dd8e;
+$blue: #58b3ff;
+$purple: #ae99ff;
+
+// $red: #fb5454;
+// $orange: #ffa500;
+// $yellow: #e2d313;
+// $green: #1fc139;
+// $blue: #2175c0;
+// $purple: #ce08d7;
+@import 'button.scss';

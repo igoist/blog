@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const glob = require('glob');
 
 const publicPath = '/';
 const srcPath = './src';
@@ -10,8 +9,12 @@ const webpackConfig = {
   entry: {
     index: [
       'react-hot-loader/patch',
-      path.resolve(__dirname, path.resolve(srcPath, 'index.js'))
+      path.resolve(__dirname, path.resolve(srcPath, 'index.jsx'))
     ]
+  },
+
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
 
   output: {
@@ -23,7 +26,7 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: ['babel-loader', 'eslint-loader'],
         include: path.join(__dirname, srcPath)
@@ -41,8 +44,8 @@ const webpackConfig = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-         NODE_ENV: JSON.stringify('production')
-       }
+        NODE_ENV: JSON.stringify('production')
+      }
     })
   ],
   devServer: {

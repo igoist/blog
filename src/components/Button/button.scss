@@ -1,0 +1,192 @@
+$btnBgColor: #333;
+$btnFontColor: #fff;
+
+.btn {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: $btnFontColor;
+  padding: 8px 30px;
+  height: 32px;
+  background: $btnBgColor;
+  // box-shadow: 0 0 15px 2px #e2d313, #e2d313 0 0 11px 3px inset;
+  cursor: pointer;
+  outline: none;
+
+  span {
+    position: relative;
+  }
+
+  &.sm {
+    padding: 0 15px;
+    font-size: 10px;
+    border-radius: 2px;
+    height: 24px;
+  }
+  &.lg {
+    padding: 0 30px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  &.red {
+    border-color: $red;
+  }
+  &.orange {
+    border-color: $orange;
+  }
+  &.yellow {
+    border-color: $yellow;
+  }
+  &.green {
+    border-color: $green;
+  }
+  &.blue {
+    border-color: $blue;
+  }
+  &.purple {
+    border-color: $purple;
+  }
+}
+
+.btn.gradient {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border: none;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  // text-transform: uppercase;
+  letter-spacing: 2px;
+
+  &::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    // background: radial-gradient(circle closest-side, #a3b1f1, transparent);
+    background: radial-gradient(circle closest-side, #fff, transparent);
+    opacity: 0.7;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease, left 0s, top 0s;
+  }
+  &:hover::before {
+    --size: 200px;
+  }
+  &.red {
+    border-color: $red;
+    background-image: linear-gradient(135deg, $purple 0%, $red 100%);
+  }
+  &.orange {
+    border-color: $orange;
+    background-image: linear-gradient(135deg, $red 0%, $orange 100%);
+  }
+  &.yellow {
+    border-color: $yellow;
+    background-image: linear-gradient(135deg, $orange 0%, $yellow 100%);
+  }
+  &.green {
+    border-color: $green;
+    background-image: linear-gradient(135deg, $yellow 0%, $green 100%);
+  }
+  &.blue {
+    border-color: $blue;
+    background-image: linear-gradient(135deg, $green 0%, $blue 100%);
+  }
+  &.purple {
+    border-color: $purple;
+    background-image: linear-gradient(135deg, $blue 0%, $purple 100%);
+  }
+}
+
+.btn.neon-1 {
+
+  &.red {
+    box-shadow: 0 0 15px 2px $red, $red 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $red, $red 0 0 24px 5px inset;
+    }
+  }
+  &.orange {
+    box-shadow: 0 0 15px 2px $orange, $orange 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $orange, $orange 0 0 24px 5px inset;
+    }
+  }
+  &.yellow {
+    box-shadow: 0 0 15px 2px $yellow, $yellow 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $yellow, $yellow 0 0 24px 5px inset;
+    }
+  }
+  &.green {
+    box-shadow: 0 0 15px 2px $green, $green 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $green, $green 0 0 24px 5px inset;
+    }
+  }
+  &.blue {
+    box-shadow: 0 0 15px 2px $blue, $blue 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $blue, $blue 0 0 24px 5px inset;
+    }
+  }
+  &.purple {
+    // box-shadow: 0 0 15px 2px #ce08d7, #ce08d7 0 0 11px 3px inset;
+    box-shadow: 0 0 15px 2px $purple, $purple 0 0 11px 3px inset;
+    &:hover {
+      box-shadow: 0 0 20px 3px $purple, $purple 0 0 24px 5px inset;
+    }
+  }
+}
+
+.btn.neon-2 {
+  border-radius: 0;
+
+  &.red {
+    box-shadow: inset 0 0 1em $red, 0 0 1em $red;
+    &:hover {
+      background-color: $red;
+      box-shadow: inset 0 0 0 $red, 0 0 1.5em $red;
+    }
+  }
+  &.orange {
+    box-shadow: inset 0 0 1em $orange, 0 0 1em $orange;
+    &:hover {
+      background-color: $orange;
+      box-shadow: inset 0 0 0 $orange, 0 0 1.5em $orange;
+    }
+  }
+  &.yellow {
+    box-shadow: inset 0 0 1em $yellow, 0 0 1em $yellow;
+    &:hover {
+      background-color: $yellow;
+      box-shadow: inset 0 0 0 $yellow, 0 0 1.5em $yellow;
+    }
+  }
+  &.green {
+    box-shadow: inset 0 0 1em $green, 0 0 1em $green;
+    &:hover {
+      background-color: $green;
+      box-shadow: inset 0 0 0 $green, 0 0 1.5em $green;
+    }
+  }
+  &.blue {
+    box-shadow: inset 0 0 1em $blue, 0 0 1em $blue;
+    &:hover {
+      background-color: $blue;
+      box-shadow: inset 0 0 0 $blue, 0 0 1.5em $blue;
+    }
+  }
+  &.purple {
+    box-shadow: inset 0 0 1em $purple, 0 0 1em $purple;
+    &:hover {
+      background-color: $purple;
+      box-shadow: inset 0 0 0 $purple, 0 0 1.5em $purple;
+    }
+  }
+}
