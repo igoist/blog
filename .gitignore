@@ -7,3 +7,6 @@ css/
 .sass-cache/
 
 package-lock.json
+
+map.json
+__*.*

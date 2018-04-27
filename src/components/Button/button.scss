@@ -6,11 +6,12 @@ $btnFontColor: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
   color: $btnFontColor;
-  padding: 8px 30px;
+  padding: 0 20px;
   height: 32px;
   background: $btnBgColor;
   // box-shadow: 0 0 15px 2px #e2d313, #e2d313 0 0 11px 3px inset;
   cursor: pointer;
+  font-size: 14px;
   outline: none;
 
   span {
